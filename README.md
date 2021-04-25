@@ -7,4 +7,6 @@ Experiment 3 - Familiarization of DOS Interrupts
 Experiment 4 - Comparative Study of MASM, NASM and YASM assemblers
 Experiment 5 - Addition, subtraction, multiplication and division of 8-bit numbers
 Experiment 6 - Average of 3 numbers
+Experiment 7 - Number of 1's in a binary word
+Experiment 8 - Factorial of a given number using procedure
 </pre>
