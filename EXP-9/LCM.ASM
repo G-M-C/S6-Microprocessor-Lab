@@ -14,7 +14,7 @@ START:
       LEA DX,MSG1
       MOV AH,09H
       INT 21H
-      MOV AH,01H;Input the first number
+      MOV AH,01H;Input the first number.
       INT 21H
       MOV CL,AL
       SUB CL,30H
@@ -24,7 +24,7 @@ START:
       LEA DX,MSG2
       MOV AH,09H
       INT 21H
-      MOV AH,01H;Input the second number
+      MOV AH,01H;Input the second number.
       INT 21H
       MOV BL,AL
       SUB BL,30H
