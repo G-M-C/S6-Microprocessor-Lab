@@ -1,0 +1,31 @@
+ASSUME DS:DATA,CS:CODE
+
+DATA SEGMENT
+MSG1 DB 0AH,0DH,"ENTER THE STRING:$"
+MSG2 DB 0AH,0DH,"ECHO:$"
+bufferSize DB 41
+buffer DB 41 DUP("$")
+DATA ENDS
+
+CODE SEGMENT
+START:
+      MOV AX,DATA
+      MOV DS,AX
+      LEA DX,MSG1
+      MOV AH,09H
+      INT 21H
+
+      MOV DX, OFFSET bufferSize
+      MOV AH,0AH
+      INT 21H
+
+      LEA DX,MSG2
+      MOV AH,09H
+      INT 21H
+      LEA DX, buffer+01H
+      INT 21H
+      MOV AH,4CH
+      INT 21H
+
+CODE ENDS
+END START
