@@ -1,0 +1,62 @@
+ASSUME DS:DATA,CS:CODE
+
+DATA SEGMENT
+MSG1 DB 0AH,0DH,"ENTER THE STRING:$"
+MSG2 DB 0AH,0DH,"CONVERTED STRING:$"
+STR DB 50 DUP("$")
+ZERO DB 0
+DATA ENDS
+
+CODE SEGMENT
+START:
+      MOV AX,DATA
+      MOV DS,AX
+      LEA DX,MSG1
+      MOV AH,09H
+      INT 21H
+      LEA SI,STR
+      MOV AH,01H
+
+
+INPUT:
+      INT 21H
+      CMP AL,0DH
+      JE PRINT
+
+      CMP AL,97D
+      JGE LOWER
+      CMP AL,65D
+      JGE UPPER
+      JL WRITE
+
+LOWER:
+      SUB AL,32D
+      JMP WRITE
+
+UPPER:
+      ADD AL,32D
+      JMP WRITE
+
+WRITE:
+      MOV [SI],AL
+      INC SI
+      XOR AL,AL
+      JMP INPUT
+
+PRINT:
+      MOV AL,ZERO
+      MOV [SI],AL
+
+      LEA DX,MSG2
+      MOV AH,09H
+      INT 21H
+
+      LEA DX,STR
+      MOV AH,09H
+      INT 21H
+
+      MOV AH,4CH
+      INT 21H
+
+CODE ENDS
+END START
