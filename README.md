@@ -13,4 +13,5 @@ Experiment 9 - LCM of a Number
 Experiment 10 - Conversion of Hex to BCD
 Experiment 11 - Echo of a character/string
 Experiment 12 - Length of a string
+Experiment 14 - Case Change
 </pre>
