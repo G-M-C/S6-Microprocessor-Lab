@@ -1,0 +1,56 @@
+ASSUME DS:DATA,CS:CODE
+DATA SEGMENT
+MSG1 DB 0AH,0DH,"ENTER THE STRING:$"
+MSG2 DB 0AH,0DH,"IT IS A PALINDROME$"
+MSG3 DB 0AH,0DH,"IT'S NOT A PALINDROME$"
+STR DB 50 DUP("$")
+Z DB 0
+DATA ENDS
+
+CODE SEGMENT
+START:
+      MOV AX,DATA
+      MOV DS,AX
+      LEA DX,MSG1
+      MOV AH,09H
+      INT 21H
+      LEA SI,STR
+
+      MOV CL,00H
+
+L1:   MOV AH,01H
+      INT 21H
+      CMP AL,0DH
+      JE L2
+      MOV AH,00H
+      PUSH AX
+      INC CL
+      MOV [SI],AL
+      INC SI
+      JMP L1
+
+L2:   LEA SI,STR
+
+L3:   POP BX
+      DEC CL
+      CMP CL,00H
+      JE L5
+      CMP [SI],BL
+      JNE L4
+      INC SI
+      JMP L3
+
+L4:   LEA DX,MSG3
+      MOV AH,09H
+      INT 21H
+      JMP L6
+
+L5:   LEA DX,MSG2
+      MOV AH,09H
+      INT 21H
+
+L6:   MOV AH,4CH
+      INT 21H
+
+CODE ENDS
+END START
