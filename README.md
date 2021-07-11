@@ -2,7 +2,6 @@
 <h3><b><em>For all KTU CSE S6 students looking to crack the Microprocessor Lab</em></b></h3>
 <pre>
 8086 PROGRAMS
-
 Experiment 1 - Familiarization of 8086 Architecture
 Experiment 2 - Study of MASM Assembler and Debugging commands
 Experiment 3 - Familiarization of DOS Interrupts
@@ -21,6 +20,5 @@ Experiment 15 - Matrix Addition
 experiment 16 - Fibonacci Series
 
 8051 PROGRAMS
-
 Experiment 17 - Addition, subtraction, multiplication and division of 8-bit numbers using MCU 8051 IDE
 </pre>
