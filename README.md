@@ -17,7 +17,7 @@ Experiment 12 - Length of a string
 Experiment 13 - Palindrome Checker
 Experiment 14 - Case Change
 Experiment 15 - Matrix Addition
-experiment 16 - Fibonacci Series
+Experiment 16 - Fibonacci Series
 
 8051 PROGRAMS
 Experiment 17 - Addition, subtraction, multiplication and division of 8-bit numbers using MCU 8051 IDE
