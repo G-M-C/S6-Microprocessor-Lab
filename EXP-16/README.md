@@ -1,1 +1,1 @@
-# Fibonacci Series
+# Generate the terms of the Fibonacci Series
