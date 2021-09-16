@@ -23,5 +23,6 @@ Experiment 16 - Fibonacci Series
 
 ## 8051 PROGRAMS
 <pre>
-Experiment 17 - Addition, subtraction, multiplication and division of 8-bit numbers using MCU 8051 IDE
+Experiment 17 - Addition, subtraction, multiplication and division 
+                of 8-bit numbers using MCU 8051 IDE
 </pre>
