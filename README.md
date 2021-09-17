@@ -1,5 +1,5 @@
 # S6-Microprocessor-Lab
-<h3><b><em>A compilation of all the assembly lanuage programs that I did as a part of my Semester 6 Microprocessor Lab</em></b></h3>
+<h3><b><em>A compilation of all the assembly language programs that I did as a part of my Semester 6 Microprocessor Lab</em></b></h3>
 
 ## 8086 PROGRAMS
 <pre>
